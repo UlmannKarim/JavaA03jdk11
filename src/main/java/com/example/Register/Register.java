@@ -6,7 +6,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -21,7 +23,7 @@ public class Register extends Application {
 
         stage.setTitle("CS3318 A03");
         gp = build();
-        makeUI(gp);
+        makePretty(gp);
         scene = new Scene(gp, 800, 500);
         stage.setScene(scene);
         stage.show();
@@ -46,7 +48,7 @@ public class Register extends Application {
         return gp;
     }
 
-    private void makeUI(GridPane gp) {
+    private void makePretty(GridPane gp) {
         Label head;
         Label email;
         TextField emailBox;
@@ -86,6 +88,9 @@ public class Register extends Application {
         gp.add(SUBMIT, 0, 6, 2, 1);
         gp.setHalignment(SUBMIT, center);
         gp.setMargin(SUBMIT, new Insets(25, 0,25,0));
+
+        gp.setStyle("-fx-background-color: coral;");
+
 
     }
 
