@@ -58,26 +58,35 @@ public class Register extends Application {
 
         head = new Label("REGISTER.");
         head.setFont(Font.font("Helvetica", FontWeight.EXTRA_BOLD, 24));
+        head.setTextFill(Color.web("#93FFe0"));
+        head.setStyle("-fx-background-color: black;");
+
         gp.add(head, 0,0,6,1);
         gp.setMargin(head, new Insets(25, 0,35,0));
         gp.setHalignment(head, center);
 
         email = new Label("Email  ");
-        email.setFont(Font.font("Helvetica", FontPosture.ITALIC, 18));
+        email.setFont(Font.font("Helvetica", FontPosture.ITALIC,  20));
+        email.setTextFill(Color.web("#93FFe0"));
+        email.setStyle("-fx-background-color: black;");
         gp.add(email, 0, 1);
 
         emailBox = new TextField();
         emailBox.setPrefHeight(45);
         emailBox.setPrefWidth(100);
+        emailBox.setStyle("-fx-background-color: grey;");
         gp.add(emailBox, 1, 2);
 
         pass = new Label("Password ");
-        pass.setFont(Font.font("Helvetica", FontPosture.ITALIC, 18));
+        pass.setFont(Font.font("Helvetica",  FontPosture.ITALIC,  20));
+        pass.setTextFill(Color.web("#93FFe0"));
+        pass.setStyle("-fx-background-color: black;");
         gp.add(pass, 0, 3);
 
         passBox = new PasswordField();
         passBox.setPrefHeight(45);
         passBox.setPrefWidth(100);
+        passBox.setStyle("-fx-background-color: grey;");
         gp.add(passBox, 1, 4);
 
         Button SUBMIT = new Button("SUBMIT");
@@ -89,7 +98,7 @@ public class Register extends Application {
         gp.setHalignment(SUBMIT, center);
         gp.setMargin(SUBMIT, new Insets(25, 0,25,0));
 
-        gp.setStyle("-fx-background-color: coral;");
+        gp.setStyle("-fx-background-color: #F5987D;");
 
 
     }
